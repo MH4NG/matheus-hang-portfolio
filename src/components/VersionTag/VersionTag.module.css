@@ -1,0 +1,13 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--accent-tag);
+  background: var(--accent-tag-bg);
+  border: 1px solid color-mix(in srgb, var(--accent-tag) 35%, transparent);
+  border-radius: var(--radius-sm);
+  padding: 2px var(--space-2);
+  line-height: 1.4;
+}

@@ -1,0 +1,48 @@
+.skills {
+  padding: var(--space-16) 0;
+  border-top: 1px solid var(--line);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--ink-faint);
+  margin-bottom: var(--space-2);
+}
+
+.heading {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-8);
+}
+
+.panel {
+  background: var(--bg-code);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: var(--space-6) var(--space-8);
+}
+
+.panelLine {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--ink-faint);
+  margin: 0;
+}
+
+.group {
+  margin: var(--space-2) 0 var(--space-2) var(--space-4);
+}
+
+.groupLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--accent-tag);
+  margin: 0;
+}
+
+.badgeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-2) 0 var(--space-2) var(--space-6);
+}

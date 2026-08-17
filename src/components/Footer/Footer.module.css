@@ -1,0 +1,17 @@
+.footer {
+  border-top: 1px solid var(--line);
+  padding: var(--space-8) 0;
+  margin-top: var(--space-24);
+}
+
+.line {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-faint);
+}
+
+.prompt {
+  color: var(--accent-added);
+  margin-right: var(--space-2);
+}
