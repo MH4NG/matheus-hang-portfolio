@@ -5,6 +5,9 @@ Apresenta os principais projetos, habilidades e formas de contato no formato de 
 "changelog de desenvolvedor": cada projeto é tratado como uma versão lançada, com
 tecnologias marcadas no estilo diff (`+ adicionado` / `− corrigido`).
 
+🔗 **Ao vivo:** https://portfolio-h4-ng.vercel.app
+📦 **Repositório:** https://github.com/MH4NG/matheus-hang-portfolio
+
 ## Como rodar localmente
 
 \`\`\`bash
@@ -38,33 +41,35 @@ src/
 Cada componente/seção tem seu próprio arquivo `.module.css` ao lado do `.jsx`,
 seguindo o padrão de CSS Modules (estilos com escopo local, sem conflito de nomes).
 
-## Pendências para você preencher (marcadas com `TODO` no código)
+## Projetos em destaque
 
-- **Foto de perfil**: adicionar em `public/images/profile/foto.jpg` (referenciada em `src/sections/About/About.jsx`)
-- **Informações de contato**: e-mail, LinkedIn e demais redes em `src/sections/About/About.jsx` e `src/components/ContactForm/ContactForm.jsx` (constante `CONTACT_EMAIL`)
-- **Links dos projetos**: `repoUrl` e `demoUrl` de cada projeto em `src/data/projects.js`
-- **Imagens/capturas de tela dos projetos**: adicionar em `public/images/projects/` e referenciar em `src/data/projects.js` (campos `image` e `screenshots`)
-- **Datas dos projetos**: campo `date` em `src/data/projects.js`
+Cada projeto listado no portfólio tem repositório e demo publicados:
 
-## Deploy gratuito
+| Projeto | Repositório | Demo |
+| --- | --- | --- |
+| tarefas-app | github.com/MH4NG/tarefas-app | tarefas-app-h4-ng.vercel.app |
+| diario-de-bordo | github.com/MH4NG/diario-de-bordo | diario-de-bordo-h4-ng.vercel.app |
+| micro-frontends | github.com/MH4NG/micro-frontends-module-federation | micro-frontends-h4-ng.vercel.app |
+| todolist-recoil | github.com/MH4NG/todolist-recoil | todolist-recoil-h4-ng.vercel.app |
 
-### Vercel (recomendado, mesma stack usada no tarefas-app)
+## Pendências
+
+- **Link do LinkedIn**: ainda como placeholder em `src/sections/About/About.jsx` (marcado com `TODO`)
+
+## Deploy
+
+Já publicado no Vercel (link no topo deste README). Para republicar após novas
+alterações:
 
 \`\`\`bash
-npm install -g vercel
-vercel
+vercel --prod
 \`\`\`
 
-Ou, pelo site: importe o repositório do GitHub em vercel.com/new — o Vercel detecta
-automaticamente que é um projeto Vite.
+Alternativas gratuitas, caso queira migrar:
 
-### Netlify
+**Netlify** — Build command: `npm run build` · Publish directory: `dist`
 
-- Build command: `npm run build`
-- Publish directory: `dist`
-
-### GitHub Pages
-
+**GitHub Pages**
 1. Instale o pacote de deploy: `npm install --save-dev gh-pages`
 2. Em `vite.config.js`, defina `base: '/nome-do-repositorio/'`
 3. Adicione ao `package.json`: `"deploy": "vite build && gh-pages -d dist"`
