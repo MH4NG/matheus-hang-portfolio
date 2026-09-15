@@ -74,7 +74,7 @@ export default function ProjectEntry({ project }) {
           <a href={repoUrl} target="_blank" rel="noreferrer">
             repositório
           </a>
-          {demoUrl && demoUrl !== '#' && (
+          {demoUrl && (
             <a href={demoUrl} target="_blank" rel="noreferrer">
               demo
             </a>

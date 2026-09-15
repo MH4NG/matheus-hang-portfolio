@@ -1,10 +1,7 @@
 /**
  * Dados dos projetos, organizados como "versões" de um changelog.
- * Ordem: da mais antiga (v1.0.0) para a mais recente (v4.0.0),
- * refletindo a evolução técnica ao longo do curso.
- *
- * TODO (Hang): ajustar `date`, `repoUrl`, `demoUrl` e `image`/`screenshots`
- * conforme os links e capturas de tela reais forem enviados.
+ * A numeração (v1.0.0 → v4.0.0) reflete a evolução técnica ao longo
+ * do curso; `date` é o mês do último push de cada repositório.
  */
 
 export const projects = [
@@ -12,7 +9,7 @@ export const projects = [
     slug: 'tarefas-app',
     version: 'v4.0.0',
     name: 'Tarefas App',
-    date: '2026', // TODO: mês/ano de conclusão
+    date: 'jul/2026',
     tagline: 'Task app com pipeline de CI/CD completo',
     description:
       'Aplicação de gerenciamento de tarefas construída com Next.js 16 e TypeScript, com cobertura de testes consistente e deploy automatizado via GitHub Actions.',
@@ -39,7 +36,7 @@ export const projects = [
     slug: 'diario-de-bordo',
     version: 'v3.0.0',
     name: 'Diário de Bordo',
-    date: '2026', // TODO
+    date: 'ago/2026',
     tagline: 'PWA offline-first com foco em performance',
     description:
       'Progressive Web App para registro de atividades diárias, instalável e funcional offline, posteriormente auditado e otimizado com Chrome DevTools e Lighthouse.',
@@ -68,7 +65,7 @@ export const projects = [
     slug: 'micro-frontends',
     version: 'v2.0.0',
     name: 'Micro Frontends — Cardápio & Pedido',
-    date: '2026', // TODO
+    date: 'ago/2026',
     tagline: 'Arquitetura de micro frontends com Module Federation',
     description:
       'Aplicação dividida em um container e dois micro frontends independentes (Cardápio e Pedido), integrados em tempo de execução via Webpack Module Federation.',
@@ -82,7 +79,7 @@ export const projects = [
       'Comunicação entre micros via eventos globais (window.dispatchEvent)',
     ],
     repoUrl: 'https://github.com/MH4NG/micro-frontends-module-federation',
-    demoUrl: '#', // TODO: link do deploy
+    demoUrl: 'https://micro-frontends-h4-ng.vercel.app',
     image: '/images/projects/micro-frontends-cover.jpg',
     screenshots: [
       '/images/projects/micro-frontends-cover.jpg',
@@ -95,7 +92,7 @@ export const projects = [
     slug: 'todolist-recoil',
     version: 'v1.0.0',
     name: 'Lista de Tarefas — Recoil',
-    date: '2026', // TODO
+    date: 'abr/2026',
     tagline: 'Estado global com Recoil (atoms & selectors)',
     description:
       'Lista de tarefas com prioridades, filtros e progresso em tempo real, construída para aplicar na prática os conceitos centrais de gerenciamento de estado global do Recoil.',

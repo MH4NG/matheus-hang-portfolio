@@ -12,8 +12,8 @@ export default function Projects() {
         <p className={styles.label}>// projetos</p>
         <h2 className={styles.heading}>Histórico de versões</h2>
         <p className={styles.intro}>
-          Cada projeto abaixo é tratado como uma versão lançada — da mais recente à mais
-          antiga — mostrando a evolução técnica ao longo do curso.
+          Cada projeto abaixo é tratado como uma versão lançada, ordenada pela progressão
+          técnica do curso — da arquitetura mais avançada aos fundamentos.
         </p>
 
         <div ref={revealRef} className="reveal">
