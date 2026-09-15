@@ -4,8 +4,49 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfólio de Hang — projetos, experiências e habilidades em desenvolvimento web front-end." />
-    <title>Hang — Portfólio</title>
+    <meta name="theme-color" content="#f3f5f4" />
+
+    <!-- Titulo base da home e fallback para crawlers que nao executam JS.
+         ProjectDetail e NotFound sobrescrevem via <title> do React 19. -->
+    <title>Matheus Hang — Desenvolvedor Front-end</title>
+    <meta
+      name="description"
+      content="Portfólio de Matheus Hang — projetos em React, Next.js e TypeScript, apresentados como um changelog de versões."
+    />
+    <link rel="canonical" href="https://portfolio-h4-ng.vercel.app/" />
+
+    <!-- Fontes: carregadas aqui, e não via @import no CSS, para o browser
+         descobrir a URL imediatamente em vez de esperar o CSS baixar e
+         parsear primeiro (dois round-trips em série bloqueando o render). -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+    />
+
+    <!-- Open Graph — card exibido ao compartilhar no LinkedIn, Slack, WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Portfólio de Matheus Hang" />
+    <meta property="og:title" content="Matheus Hang — Desenvolvedor Front-end" />
+    <meta
+      property="og:description"
+      content="Projetos em React, Next.js e TypeScript, apresentados como um changelog de versões — de PWAs offline-first a micro frontends e pipelines de CI/CD."
+    />
+    <meta property="og:url" content="https://portfolio-h4-ng.vercel.app/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="https://portfolio-h4-ng.vercel.app/images/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Portfólio de Matheus Hang, desenvolvedor front-end" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Matheus Hang — Desenvolvedor Front-end" />
+    <meta
+      name="twitter:description"
+      content="Projetos em React, Next.js e TypeScript, apresentados como um changelog de versões."
+    />
+    <meta name="twitter:image" content="https://portfolio-h4-ng.vercel.app/images/og-cover.png" />
   </head>
   <body>
     <div id="root"></div>

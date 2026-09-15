@@ -52,7 +52,11 @@
 
 .cover {
   width: 100%;
-  max-height: 340px;
+  /* aspect-ratio em vez de max-height: reserva a altura ANTES da imagem
+     carregar. Sem isso o container nasce com 18px e salta para ~342px
+     quando a imagem chega, empurrando todo o conteudo abaixo. */
+  aspect-ratio: 12 / 5;
+  height: auto;
   object-fit: cover;
   object-position: top;
   transition: transform 0.2s ease;
@@ -145,4 +149,12 @@
   gap: var(--space-4);
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
+}
+
+@media (max-width: 640px) {
+  /* 12/5 deixaria a capa muito baixa no celular; 16/10 mantem a altura
+     proxima da que ela tinha antes nessa largura. */
+  .cover {
+    aspect-ratio: 16 / 10;
+  }
 }

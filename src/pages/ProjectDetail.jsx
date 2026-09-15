@@ -1,14 +1,17 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getProjectBySlug } from '../data/projects';
 import VersionTag from '../components/VersionTag/VersionTag';
+import NotFound from './NotFound';
 import styles from './ProjectDetail.module.css';
 
 export default function ProjectDetail() {
   const { slug } = useParams();
   const project = getProjectBySlug(slug);
 
+  // Slug inexistente: a rota casa, mas o projeto não existe. Mostra o 404
+  // em vez de redirecionar em silêncio para a home.
   if (!project) {
-    return <Navigate to="/" replace />;
+    return <NotFound />;
   }
 
   const { version, name, date, tagline, longDescription, tech, added, fixed, repoUrl, demoUrl, screenshots } =
@@ -16,6 +19,10 @@ export default function ProjectDetail() {
 
   return (
     <article className={styles.detail}>
+      {/* React 19 iça <title>/<meta> para o <head> sem biblioteca externa */}
+      <title>{`${name} ${version} — Matheus Hang`}</title>
+      <meta name="description" content={tagline} />
+
       <div className="container">
         <Link to="/#projetos" className={styles.back}>
           ← voltar para /projetos
@@ -62,11 +69,10 @@ export default function ProjectDetail() {
           )}
         </div>
 
-        {/* TODO (Hang): enviar capturas de tela do projeto para exibir aqui */}
         {screenshots.length > 0 && (
           <div className={styles.screenshots}>
             {screenshots.map((src) => (
-              <img key={src} src={src} alt={`Captura de tela de ${name}`} />
+              <img key={src} src={src} alt={`Captura de tela de ${name}`} loading="lazy" />
             ))}
           </div>
         )}
@@ -75,7 +81,7 @@ export default function ProjectDetail() {
           <a href={repoUrl} target="_blank" rel="noreferrer" className={styles.primaryCta}>
             ver repositório →
           </a>
-          {demoUrl && demoUrl !== '#' && (
+          {demoUrl && (
             <a href={demoUrl} target="_blank" rel="noreferrer" className={styles.secondaryCta}>
               ver demonstração
             </a>
