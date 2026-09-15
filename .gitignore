@@ -15,6 +15,9 @@ dist-ssr
 # Saidas do Playwright MCP (screenshots, snapshots, traces)
 .playwright-mcp
 
+# Vinculo local da CLI do Vercel (contem ids de projeto/organizacao)
+.vercel
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
