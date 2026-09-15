@@ -8,6 +8,7 @@ export default function About() {
     <section id="sobre" className={styles.about}>
       <div className="container">
         <p className={styles.label}>// sobre</p>
+        <h2 className={styles.heading}>README.md</h2>
 
         <div ref={revealRef} className={`reveal ${styles.content}`}>
           <div className={styles.photoFrame}>
@@ -23,7 +24,7 @@ export default function About() {
           <div className={styles.text}>
             {/* TODO (Hang): personalizar o texto de apresentação */}
             <p>
-              Sou estudante de desenvolvimento front end web, estou construíndo este portfólio como projeto
+              Sou estudante de desenvolvimento front-end web e estou construindo este portfólio como projeto
               final do curso. Ao longo da minha formação, passei por projetos que vão de fundamentos
               de React e TypeScript até arquitetura de micro frontends, PWAs offline-first e
               pipelines de CI/CD — sempre documentando o processo e testando na prática cada

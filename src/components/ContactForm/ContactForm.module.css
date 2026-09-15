@@ -30,10 +30,20 @@
   resize: vertical;
 }
 
+/* Sem `outline: none` aqui: um border-bottom de 1px trocando de cor não é
+   indicador de foco suficiente (WCAG 2.4.7). Assim o outline global de
+   :focus-visible continua valendo para navegação por teclado. */
 .field input:focus,
 .field textarea:focus {
   border-bottom-color: var(--accent-added);
-  outline: none;
+}
+
+/* Campo com erro: a borda reforça a mensagem, para não depender só de cor
+   de texto nem só do anúncio do leitor de tela. */
+.field input[aria-invalid],
+.field textarea[aria-invalid] {
+  border-bottom-color: var(--accent-fixed);
+  border-bottom-width: 2px;
 }
 
 .error {
@@ -65,4 +75,11 @@
   font-family: var(--font-mono);
   font-size: var(--fs-sm);
   color: var(--accent-added);
+  margin: 0;
 }
+
+/* Sem `:empty { display: none }` aqui: uma região aria-live com
+   display:none fica fora da árvore de acessibilidade e deixa de ser
+   anunciada quando o conteúdo entra — anulando o propósito dela.
+   Vazia e com margin 0 ela já tem altura zero; o único custo é um gap
+   do flex do formulário. */

@@ -36,16 +36,19 @@
 
 .links {
   display: flex;
-  gap: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-6);
   font-family: var(--font-mono);
   font-size: var(--fs-sm);
-  overflow-x: auto;
 }
 
 .links a {
   color: var(--ink-soft);
   text-decoration: none;
   white-space: nowrap;
+  /* Sem padding o alvo tem 23px de altura e falha o mínimo de 24px do
+     WCAG 2.5.8 por 1px. Com isso vai a ~39px. */
+  padding: var(--space-2) 0;
 }
 
 .links a:hover {
@@ -53,8 +56,19 @@
 }
 
 @media (max-width: 640px) {
+  /* Marca e links em linhas separadas: o nav ganha a largura total e os
+     quatro links ficam visíveis, em vez de metade deles sumir num
+     scroll horizontal sem nenhuma indicação de que existe. */
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
   .links {
-    gap: var(--space-4);
+    width: 100%;
+    /* row-gap 0: o padding vertical dos links já separa as duas linhas */
+    gap: 0 var(--space-4);
   }
 
   .brandCursor {

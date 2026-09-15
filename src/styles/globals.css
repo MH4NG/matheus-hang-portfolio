@@ -7,7 +7,9 @@
    técnica ao longo do curso.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap');
+/* As fontes são carregadas por <link> no index.html, não por @import aqui:
+   o @import obriga o browser a baixar e parsear este CSS antes de sequer
+   descobrir a URL do Google Fonts, encadeando dois round-trips. */
 
 :root {
   /* Cor — fundo neutro frio (não creme), acentos semânticos de diff */
@@ -16,7 +18,7 @@
   --bg-code: #eef1ef;
   --ink: #12161c;
   --ink-soft: #4b5563;
-  --ink-faint: #8b93a1;
+  --ink-faint: #626974;      /* contraste 5.05:1 sobre --bg (WCAG AA) */
   --line: #dde2df;
   --line-strong: #c4cbc7;
 
@@ -124,10 +126,48 @@ button, input, textarea {
   outline-offset: 2px;
 }
 
+/* Skip link: fora da tela até receber foco por teclado. Usa translate
+   em vez de display:none para continuar focável. */
+.skipLink {
+  position: fixed;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 100;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--bg-elevated);
+  background: var(--ink);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform 0.15s ease;
+}
+
+.skipLink:focus-visible {
+  transform: translateY(0);
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--space-6);
+}
+
+/* A navbar é sticky, então rolar até uma âncora deixaria o topo da seção
+   atrás dela. Valores medidos: navbar de 72px no desktop e até 146px a
+   320px (marca e links em linhas separadas, links com alvo de toque de
+   39px), contra 65px de padding interno da seção até o label.
+   Vale para cliques em âncora e para o scrollIntoView do ScrollToTop. */
+section[id] {
+  scroll-margin-top: 2.5rem;
+}
+
+@media (max-width: 640px) {
+  section[id] {
+    scroll-margin-top: 6.5rem;
+  }
 }
 
 /* Cursor piscante do terminal no hero — respeita reduced motion */

@@ -5,6 +5,10 @@ const INITIAL_STATE = { name: '', email: '', message: '' };
 
 const CONTACT_EMAIL = 'matheush4ng@gmail.com';
 
+// mailto: tem limite prático de tamanho de URL; acima disso alguns
+// clientes truncam a mensagem em silêncio.
+const MAX_MESSAGE = 1200;
+
 /**
  * Formulário de contato controlado, sem backend próprio: ao enviar,
  * monta um link "mailto:" com os dados preenchidos e abre o cliente
@@ -20,6 +24,9 @@ export default function ContactForm() {
   function handleChange(event) {
     const { name, value } = event.target;
     setForm((prev) => ({ ...prev, [name]: value }));
+    // Limpa o erro do campo enquanto o visitante corrige, em vez de
+    // deixá-lo na tela até o próximo submit.
+    setErrors((prev) => (prev[name] ? { ...prev, [name]: undefined } : prev));
   }
 
   function validate() {
@@ -46,37 +53,68 @@ export default function ContactForm() {
     setForm(INITIAL_STATE);
   }
 
+  /** Atributos de acessibilidade compartilhados pelos três campos. */
+  function fieldProps(name) {
+    return {
+      id: name,
+      name,
+      value: form[name],
+      onChange: handleChange,
+      'aria-invalid': errors[name] ? true : undefined,
+      'aria-describedby': errors[name] ? `${name}-error` : undefined,
+    };
+  }
+
   return (
     <form className={styles.form} onSubmit={handleSubmit} noValidate>
       <div className={styles.field}>
         <label htmlFor="name">nome</label>
-        <input id="name" name="name" type="text" value={form.name} onChange={handleChange} />
-        {errors.name && <span className={styles.error}>{errors.name}</span>}
+        <input type="text" autoComplete="name" {...fieldProps('name')} />
+        {errors.name && (
+          <span id="name-error" className={styles.error} role="alert">
+            {errors.name}
+          </span>
+        )}
       </div>
 
       <div className={styles.field}>
         <label htmlFor="email">email</label>
-        <input id="email" name="email" type="email" value={form.email} onChange={handleChange} />
-        {errors.email && <span className={styles.error}>{errors.email}</span>}
+        <input type="email" autoComplete="email" {...fieldProps('email')} />
+        {errors.email && (
+          <span id="email-error" className={styles.error} role="alert">
+            {errors.email}
+          </span>
+        )}
       </div>
 
       <div className={styles.field}>
         <label htmlFor="message">mensagem</label>
-        <textarea
-          id="message"
-          name="message"
-          rows={5}
-          value={form.message}
-          onChange={handleChange}
-        />
-        {errors.message && <span className={styles.error}>{errors.message}</span>}
+        <textarea rows={5} maxLength={MAX_MESSAGE} {...fieldProps('message')} />
+        {errors.message && (
+          <span id="message-error" className={styles.error} role="alert">
+            {errors.message}
+          </span>
+        )}
       </div>
 
       <button type="submit" className={styles.submit}>
         enviar mensagem →
       </button>
 
-      {sent && <p className={styles.success}>Abrindo seu cliente de e-mail…</p>}
+      {/* aria-live para o leitor de tela anunciar o resultado. O endereço
+          aparece como alternativa: se o visitante não tiver cliente de
+          e-mail configurado, o mailto: não abre nada e a mensagem sozinha
+          seria enganosa. */}
+      <p className={styles.success} role="status" aria-live="polite">
+        {sent ? (
+          <>
+            Abrindo seu cliente de e-mail… Se nada acontecer, escreva direto para{' '}
+            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+          </>
+        ) : (
+          ''
+        )}
+      </p>
     </form>
   );
 }
