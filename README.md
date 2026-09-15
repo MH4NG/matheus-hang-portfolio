@@ -80,12 +80,21 @@ micro-frontends é o repositório mais recente, mas aparece como v2.0.0.
 
 ## Deploy
 
-Já publicado no Vercel (link no topo deste README). Para republicar após novas
-alterações:
+Publicado no Vercel (projeto `portfolio`, escopo `h4-ng`) com o repositório
+conectado pela integração Git. O deploy é automático:
 
-\`\`\`bash
-vercel --prod
-\`\`\`
+| Evento | Resultado |
+| --- | --- |
+| push na `main` | deploy de **produção** |
+| push em qualquer outra branch | **preview** com URL própria |
+
+Não é preciso rodar nada localmente — e, por isso, não é preciso ter a CLI
+autenticada em cada máquina. Em caso de problema, *Instant Rollback* no painel
+volta para o deployment anterior.
+
+O `vercel.json` na raiz reescreve todas as rotas para `index.html`. Sem isso,
+as rotas do React Router (`/projetos/:slug`) respondem 404 quando acessadas
+diretamente, em vez de navegando pelo app.
 
 Alternativas gratuitas, caso queira migrar:
 
