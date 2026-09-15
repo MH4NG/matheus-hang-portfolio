@@ -1,8 +1,10 @@
 name: CI
 
 on:
+  # Todas as branches, não só a main: o objetivo é pegar a quebra antes de
+  # ela chegar na main, e uma branch sem PR aberto não seria verificada.
   push:
-    branches: [main]
+    branches: ['**']
   pull_request:
     branches: [main]
 
