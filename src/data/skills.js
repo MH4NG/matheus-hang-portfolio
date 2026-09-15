@@ -23,7 +23,7 @@ export const skillGroups = [
   {
     category: 'testes',
     label: 'testes & qualidade',
-    skills: ['Jest', 'Testing Library'],
+    skills: ['Vitest', 'Jest', 'Testing Library'],
   },
   {
     category: 'devops',

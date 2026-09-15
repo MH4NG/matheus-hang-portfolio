@@ -25,14 +25,31 @@ Acesse `http://localhost:5173`.
 | `npm run build`     | Build de produção (pasta `dist/`)           |
 | `npm run preview`   | Serve o build de produção localmente         |
 | `npm run lint`      | Roda o linter (oxlint)                       |
+| `npm test`          | Roda a suíte de testes (Vitest)              |
+| `npm run test:watch`| Testes em modo watch                         |
+
+## Testes e CI
+
+25 testes em Vitest + Testing Library, cobrindo três frentes:
+
+- **`src/data/projects.test.js`** — busca por slug e integridade dos dados
+  (slugs únicos, URLs reais sem placeholder, datas no formato mês/ano)
+- **`src/components/ProjectEntry`** — renderização dos campos, seção "Fixed"
+  condicional, link de demo omitido quando não há `demoUrl`
+- **`src/components/ContactForm`** — validação, montagem do `mailto:` e a
+  acessibilidade (`aria-invalid`, `aria-describedby`, `role="alert"`,
+  região `aria-live`)
+
+O workflow em `.github/workflows/ci.yml` roda `lint → test → build` a cada
+push e pull request na `main`.
 
 ## Estrutura de pastas
 
 \`\`\`
 src/
-├── components/     # Componentes reutilizáveis (Navbar, Footer, ProjectEntry, SkillBadge, ContactForm, VersionTag)
+├── components/     # Componentes reutilizáveis (Navbar, Footer, ProjectEntry, SkillBadge, ContactForm, VersionTag, ScrollToTop)
 ├── sections/       # Seções da home (Hero, About, Projects, Skills, Contact)
-├── pages/          # Páginas roteadas (Home, ProjectDetail)
+├── pages/          # Páginas roteadas (Home, ProjectDetail, NotFound)
 ├── data/           # Dados dos projetos e habilidades (projects.js, skills.js)
 ├── hooks/          # Hooks customizados (useScrollReveal)
 └── styles/         # Tokens de design e reset global (globals.css)
@@ -45,16 +62,21 @@ seguindo o padrão de CSS Modules (estilos com escopo local, sem conflito de nom
 
 Cada projeto listado no portfólio tem repositório e demo publicados:
 
-| Projeto | Repositório | Demo |
-| --- | --- | --- |
-| tarefas-app | github.com/MH4NG/tarefas-app | tarefas-app-h4-ng.vercel.app |
-| diario-de-bordo | github.com/MH4NG/diario-de-bordo | diario-de-bordo-h4-ng.vercel.app |
-| micro-frontends | github.com/MH4NG/micro-frontends-module-federation | micro-frontends-h4-ng.vercel.app |
-| todolist-recoil | github.com/MH4NG/todolist-recoil | todolist-recoil-h4-ng.vercel.app |
+| Versão | Projeto | Repositório | Demo | Concluído |
+| --- | --- | --- | --- | --- |
+| v4.0.0 | tarefas-app | github.com/MH4NG/tarefas-app | tarefas-app-h4-ng.vercel.app | jul/2026 |
+| v3.0.0 | diario-de-bordo | github.com/MH4NG/diario-de-bordo | diario-de-bordo-h4-ng.vercel.app | ago/2026 |
+| v2.0.0 | micro-frontends | github.com/MH4NG/micro-frontends-module-federation | micro-frontends-h4-ng.vercel.app | ago/2026 |
+| v1.0.0 | todolist-recoil | github.com/MH4NG/todolist-recoil | todolist-recoil-h4-ng.vercel.app | abr/2026 |
+
+As datas vêm do último push de cada repositório. Note que a numeração de versões
+reflete a **progressão técnica** do curso, não a ordem cronológica: o
+micro-frontends é o repositório mais recente, mas aparece como v2.0.0.
 
 ## Pendências
 
-- **Link do LinkedIn**: ainda como placeholder em `src/sections/About/About.jsx` (marcado com `TODO`)
+- **Texto de apresentação**: o parágrafo do "Sobre" em `src/sections/About/About.jsx`
+  ainda está marcado com `TODO` para personalização
 
 ## Deploy
 
