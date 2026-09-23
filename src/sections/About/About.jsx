@@ -24,11 +24,11 @@ export default function About() {
           <div className={styles.text}>
             {/* TODO (Hang): personalizar o texto de apresentação */}
             <p>
-              Sou estudante de desenvolvimento front-end web e estou construindo este portfólio como projeto
-              final do curso. Ao longo da minha formação, passei por projetos que vão de fundamentos
+              Sou desenvolvedor front-end com experiência em criar interfaces modernas e responsivas e focado em boas práticas de desenvolvimento. 
+              Ao longo da minha formação, passei por projetos que vão de fundamentos
               de React e TypeScript até arquitetura de micro frontends, PWAs offline-first e
               pipelines de CI/CD — sempre documentando o processo e testando na prática cada
-              conceito aprendido.
+              conceito aprendido com foco em qualidade e performance.
             </p>
             <p>
               Gosto de entender o "porquê" por trás de cada ferramenta antes de usá-la, e de
@@ -44,6 +44,12 @@ export default function About() {
                 <span>github</span>
                 <a href="https://github.com/MH4NG" target="_blank" rel="noreferrer">
                   github.com/MH4NG
+                </a>
+              </li>
+               <li>
+                <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/matheus-hang-h4ng/" target="_blank" rel="noreferrer">
+                  Matheus Hang | LinkedIn
                 </a>
               </li>
             </ul>

@@ -13,7 +13,7 @@ export default function Hero() {
           <h1 className={styles.heading}>
             <span className={styles.hash}>##</span> Unreleased — Matheus Hang
           </h1>
-          <p className={styles.role}>Desenvolvedor Front-end em formação</p>
+          <p className={styles.role}>Desenvolvedor Front-end e Quality Assurance</p>
           <p className={styles.summary}>
             Construo interfaces com React e Next.js, do protótipo ao deploy — passando por
             testes automatizados, performance e arquitetura de front-end.
