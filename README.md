@@ -30,7 +30,7 @@ Acesse `http://localhost:5173`.
 
 ## Testes e CI
 
-32 testes em Vitest + Testing Library, cobrindo quatro frentes:
+36 testes em Vitest + Testing Library, cobrindo cinco frentes:
 
 - **`src/data/projects.test.js`** — busca por slug e integridade dos dados
   (slugs únicos, URLs reais sem placeholder, datas no formato mês/ano)
@@ -39,6 +39,8 @@ Acesse `http://localhost:5173`.
 - **`src/components/ContactForm`** — validação, montagem do `mailto:` e a
   acessibilidade (`aria-invalid`, `aria-describedby`, `role="alert"`,
   região `aria-live`)
+- **`src/hooks/useScrollReveal`** — revelação ao entrar na viewport e os dois
+  caminhos de fallback (movimento reduzido e ausência de `IntersectionObserver`)
 - **`src/hooks/useStaggerReveal`** — o escalonamento da entrada dos projetos:
   item sozinho anima sem atraso, itens que entram juntos são ordenados pela
   posição na tela, teto do atraso, e os dois caminhos de fallback

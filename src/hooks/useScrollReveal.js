@@ -15,12 +15,15 @@ export function useScrollReveal(options = { threshold: 0.15 }) {
     const node = ref.current;
     if (!node) return;
 
-    // Respeita a preferência de movimento reduzido: mostra direto, sem animação
+    // Respeita a preferência de movimento reduzido: mostra direto, sem animação.
+    // O mesmo caminho serve de rede de segurança onde IntersectionObserver não
+    // existe — sem ele nada adicionaria "isVisible", e ".reveal" começa com
+    // opacity 0, ou seja, a seção simplesmente nunca apareceria.
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;
 
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion || typeof IntersectionObserver === 'undefined') {
       node.classList.add('isVisible');
       return;
     }
