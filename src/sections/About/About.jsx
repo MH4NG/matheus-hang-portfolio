@@ -22,13 +22,13 @@ export default function About() {
           </div>
 
           <div className={styles.text}>
-            {/* TODO (Hang): personalizar o texto de apresentação */}
             <p>
-              Sou desenvolvedor front-end com experiência em criar interfaces modernas e responsivas e focado em boas práticas de desenvolvimento. 
-              Ao longo da minha formação, passei por projetos que vão de fundamentos
-              de React e TypeScript até arquitetura de micro frontends, PWAs offline-first e
-              pipelines de CI/CD — sempre documentando o processo e testando na prática cada
-              conceito aprendido com foco em qualidade e performance.
+              Sou desenvolvedor front-end com experiência em criar interfaces modernas e
+              responsivas, com foco em boas práticas de desenvolvimento e em qualidade de
+              software. Ao longo da minha formação, passei por projetos que vão de
+              fundamentos de React e TypeScript até arquitetura de micro frontends, PWAs
+              offline-first e pipelines de CI/CD — sempre documentando o processo, cobrindo
+              o código com testes automatizados e medindo performance na prática.
             </p>
             <p>
               Gosto de entender o "porquê" por trás de cada ferramenta antes de usá-la, e de
@@ -46,7 +46,7 @@ export default function About() {
                   github.com/MH4NG
                 </a>
               </li>
-               <li>
+              <li>
                 <span>LinkedIn</span>
                 <a href="https://www.linkedin.com/in/matheus-hang-h4ng/" target="_blank" rel="noreferrer">
                   Matheus Hang | LinkedIn

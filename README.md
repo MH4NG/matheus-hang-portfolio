@@ -73,11 +73,6 @@ As datas vêm do último push de cada repositório. Note que a numeração de ve
 reflete a **progressão técnica** do curso, não a ordem cronológica: o
 micro-frontends é o repositório mais recente, mas aparece como v2.0.0.
 
-## Pendências
-
-- **Texto de apresentação**: o parágrafo do "Sobre" em `src/sections/About/About.jsx`
-  ainda está marcado com `TODO` para personalização
-
 ## Deploy
 
 Publicado no Vercel (projeto `portfolio`, escopo `h4-ng`) com o repositório
