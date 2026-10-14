@@ -1,10 +1,10 @@
 import { projects } from '../../data/projects';
 import ProjectEntry from '../../components/ProjectEntry/ProjectEntry';
-import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useStaggerReveal } from '../../hooks/useStaggerReveal';
 import styles from './Projects.module.css';
 
 export default function Projects() {
-  const revealRef = useScrollReveal();
+  const staggerRef = useStaggerReveal();
 
   return (
     <section id="projetos" className={styles.projects}>
@@ -16,7 +16,9 @@ export default function Projects() {
           técnica do curso — da arquitetura mais avançada aos fundamentos.
         </p>
 
-        <div ref={revealRef} className="reveal">
+        {/* Cada entrada se revela ao entrar na viewport, em vez de a lista
+            inteira animar de uma vez quando o topo aparece. */}
+        <div ref={staggerRef}>
           {projects.map((project) => (
             <ProjectEntry key={project.slug} project={project} />
           ))}

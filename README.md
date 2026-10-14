@@ -30,7 +30,7 @@ Acesse `http://localhost:5173`.
 
 ## Testes e CI
 
-25 testes em Vitest + Testing Library, cobrindo três frentes:
+32 testes em Vitest + Testing Library, cobrindo quatro frentes:
 
 - **`src/data/projects.test.js`** — busca por slug e integridade dos dados
   (slugs únicos, URLs reais sem placeholder, datas no formato mês/ano)
@@ -39,6 +39,10 @@ Acesse `http://localhost:5173`.
 - **`src/components/ContactForm`** — validação, montagem do `mailto:` e a
   acessibilidade (`aria-invalid`, `aria-describedby`, `role="alert"`,
   região `aria-live`)
+- **`src/hooks/useStaggerReveal`** — o escalonamento da entrada dos projetos:
+  item sozinho anima sem atraso, itens que entram juntos são ordenados pela
+  posição na tela, teto do atraso, e os dois caminhos de fallback
+  (movimento reduzido e ausência de `IntersectionObserver`)
 
 O workflow em `.github/workflows/ci.yml` roda `lint → test → build` a cada
 push e pull request na `main`.
@@ -51,7 +55,7 @@ src/
 ├── sections/       # Seções da home (Hero, About, Projects, Skills, Contact)
 ├── pages/          # Páginas roteadas (Home, ProjectDetail, NotFound)
 ├── data/           # Dados dos projetos e habilidades (projects.js, skills.js)
-├── hooks/          # Hooks customizados (useScrollReveal)
+├── hooks/          # Hooks customizados (useScrollReveal, useStaggerReveal)
 └── styles/         # Tokens de design e reset global (globals.css)
 \`\`\`
 

@@ -7,7 +7,7 @@ export default function ProjectEntry({ project }) {
     project;
 
   return (
-    <article className={styles.entry}>
+    <article className={`reveal ${styles.entry}`}>
       <header className={styles.header}>
         <div className={styles.titleRow}>
           <VersionTag version={version} />
