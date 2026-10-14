@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio-h4-ng.vercel.app/sitemap.xml
+Sitemap: https://h4ng.vercel.app/sitemap.xml
