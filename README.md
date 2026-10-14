@@ -5,7 +5,7 @@ Apresenta os principais projetos, habilidades e formas de contato no formato de 
 "changelog de desenvolvedor": cada projeto é tratado como uma versão lançada, com
 tecnologias marcadas no estilo diff (`+ adicionado` / `− corrigido`).
 
-🔗 **Ao vivo:** https://portfolio-h4-ng.vercel.app
+🔗 **Ao vivo:** https://h4ng.vercel.app
 📦 **Repositório:** https://github.com/MH4NG/matheus-hang-portfolio
 
 ## Como rodar localmente
