@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- Fonte da imagem Open Graph (public/images/og-cover.png, 1200x630).
+     Fica fora de public/ para não ser publicada junto com o site.
+
+     Para regenerar após editar, rode da raiz do projeto (Git Bash). Os
+     caminhos precisam ser absolutos — com relativos o Chrome trava sem
+     gerar nada:
+       chrome --headless=new --hide-scrollbars --force-device-scale-factor=1 \
+         --window-size=1200,630 --virtual-time-budget=8000 \
+         --screenshot="$(pwd -W)/public/images/og-cover.png" \
+         "file:///$(pwd -W)/design/og-cover.html"
+
+     Depois incremente o ?v= de og:image e twitter:image no index.html —
+     LinkedIn e WhatsApp guardam a imagem pela URL e não buscam a nova
+     se ela não mudar. -->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400&display=block" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #f3f5f4;
+    color: #12161c;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 74px 80px 0;
+  }
+  .kicker { font-size: 24px; letter-spacing: 0.08em; color: #626974; line-height: 1; }
+  h1 { font-size: 72px; font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; margin-top: 14px; }
+  h1 span { color: #1f8a4c; font-weight: 700; }
+  .role { font-size: 31px; color: #1f6f8a; margin-top: 24px; line-height: 1.2; }
+  .desc { font-family: 'Source Serif 4', serif; font-size: 27px; line-height: 1.55; color: #4b5563; max-width: 700px; margin-top: 28px; }
+  .footer { display: flex; justify-content: space-between; align-items: center; margin-top: 26px; }
+  .tags { display: flex; gap: 14px; }
+  .tag { font-size: 21px; color: #a8730f; background: #f6ecd9; border: 1px solid #ecd9b3; border-radius: 4px; padding: 10px 16px; line-height: 1; }
+  .url { font-size: 23px; color: #4b5563; }
+  .url span { color: #1f8a4c; }
+</style>
+</head>
+<body>
+  <p class="kicker"># CHANGELOG</p>
+  <h1><span>##</span> Unreleased — Matheus Hang</h1>
+  <p class="role">Desenvolvedor Front-end</p>
+  <p class="desc">Interfaces com React e Next.js, do protótipo ao deploy — testes automatizados, performance e arquitetura de front&#8209;end.</p>
+  <div class="footer">
+    <div class="tags">
+      <span class="tag">v4.0.0</span><span class="tag">v3.0.0</span><span class="tag">v2.0.0</span><span class="tag">v1.0.0</span>
+    </div>
+    <p class="url"><span>$</span> h4ng.vercel.app</p>
+  </div>
+</body>
+</html>
