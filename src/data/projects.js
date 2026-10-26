@@ -28,7 +28,7 @@ export const projects = [
       'Fallback acessível (lista + mapa esquemático) quando a Maps API não carrega ou a chave falha',
     ],
     repoUrl: 'https://github.com/MH4NG/portal-voluntariado',
-    demoUrl: 'https://portal-voluntariado-h4-ng.vercel.app',
+    demoUrl: 'https://pontes-petropolis.vercel.app',
     image: '/images/projects/portal-voluntariado-cover.jpg',
     screenshots: [
       '/images/projects/portal-voluntariado-cover.jpg',
