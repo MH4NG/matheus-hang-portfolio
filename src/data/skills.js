@@ -13,7 +13,7 @@ export const skillGroups = [
   {
     category: 'estilizacao',
     label: 'estilização',
-    skills: ['CSS Modules', 'Emotion', 'CSS Responsivo'],
+    skills: ['CSS Modules', 'Tailwind CSS', 'Emotion', 'CSS Responsivo', 'GSAP'],
   },
   {
     category: 'estado-dados',

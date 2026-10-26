@@ -1,10 +1,42 @@
 /**
  * Dados dos projetos, organizados como "versões" de um changelog.
- * A numeração (v1.0.0 → v4.0.0) reflete a evolução técnica ao longo
+ * A numeração (v1.0.0 → v5.0.0) reflete a evolução técnica ao longo
  * do curso; `date` é o mês do último push de cada repositório.
  */
 
 export const projects = [
+  {
+    slug: 'portal-voluntariado',
+    version: 'v5.0.0',
+    name: 'Pontes — Portal de Voluntariado',
+    date: 'out/2026',
+    tagline: 'Portal acessível com mapa interativo e onboarding em etapas',
+    description:
+      'Portal de voluntariado municipal que conecta quem precisa de ajuda a voluntários da cidade, com mapa de ações no Google Maps, filtros compartilháveis pela URL e contato direto por WhatsApp ou e-mail.',
+    longDescription:
+      'MVP de front-end pensado para um projeto-piloto em Petrópolis (RJ): quem precisa publica um pedido de ajuda e quem quer ajudar encontra ações no mapa ou na lista e fala direto com o responsável, sem chat interno. As rotas usam o data router do React Router 7 com páginas carregadas sob demanda, e os filtros de busca, causa e urgência ficam sincronizados à URL. O cadastro é um assistente em etapas com dois perfis (voluntário e beneficiário), rascunho em sessionStorage e validação acessível. O projeto foi construído mirando WCAG 2.1 AA: foco gerenciado na troca de rota, anúncios em aria-live, navegação completa por teclado e animações GSAP que respeitam prefers-reduced-motion. Sem chave do Google Maps ou se a API falhar, o portal degrada para uma lista acessível com um mapa esquemático da cidade.',
+    tech: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS v4', 'React Router 7', 'GSAP', 'Google Maps API'],
+    added: [
+      'Mapa interativo com AdvancedMarker, InfoWindow e geocodificação de endereços',
+      'Filtros por busca, causa e urgência sincronizados à URL (links compartilháveis)',
+      'Cadastro em etapas com dois perfis, rascunho em sessionStorage e resumo de erros acessível',
+      'Contato direto por WhatsApp com mensagem pronta, e-mail e redes sociais',
+      'Tokens de design semânticos via @theme do Tailwind v4',
+      'Acessibilidade WCAG 2.1 AA: foco gerenciado, aria-live, teclado e movimento reduzido',
+    ],
+    fixed: [
+      'Fallback acessível (lista + mapa esquemático) quando a Maps API não carrega ou a chave falha',
+    ],
+    repoUrl: 'https://github.com/MH4NG/portal-voluntariado',
+    demoUrl: 'https://portal-voluntariado-h4-ng.vercel.app',
+    image: '/images/projects/portal-voluntariado-cover.jpg',
+    screenshots: [
+      '/images/projects/portal-voluntariado-cover.jpg',
+      '/images/projects/portal-voluntariado-acoes.jpg',
+      '/images/projects/portal-voluntariado-detalhe.jpg',
+      '/images/projects/portal-voluntariado-cadastro.jpg',
+    ],
+  },
   {
     slug: 'tarefas-app',
     version: 'v4.0.0',

@@ -70,6 +70,7 @@ Cada projeto listado no portfólio tem repositório e demo publicados:
 
 | Versão | Projeto | Repositório | Demo | Concluído |
 | --- | --- | --- | --- | --- |
+| v5.0.0 | portal-voluntariado | github.com/MH4NG/portal-voluntariado | portal-voluntariado-h4-ng.vercel.app | out/2026 |
 | v4.0.0 | tarefas-app | github.com/MH4NG/tarefas-app | tarefas-app-h4-ng.vercel.app | jul/2026 |
 | v3.0.0 | diario-de-bordo | github.com/MH4NG/diario-de-bordo | diario-de-bordo-h4-ng.vercel.app | ago/2026 |
 | v2.0.0 | micro-frontends | github.com/MH4NG/micro-frontends-module-federation | micro-frontends-h4-ng.vercel.app | ago/2026 |

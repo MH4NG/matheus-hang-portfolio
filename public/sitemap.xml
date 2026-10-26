@@ -5,6 +5,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://h4ng.vercel.app/projetos/portal-voluntariado</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://h4ng.vercel.app/projetos/tarefas-app</loc>
     <priority>0.8</priority>
   </url>
