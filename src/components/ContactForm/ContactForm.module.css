@@ -42,14 +42,14 @@
    de texto nem só do anúncio do leitor de tela. */
 .field input[aria-invalid],
 .field textarea[aria-invalid] {
-  border-bottom-color: var(--accent-fixed);
+  border-bottom-color: var(--accent-error);
   border-bottom-width: 2px;
 }
 
 .error {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  color: var(--accent-fixed);
+  color: var(--accent-error);
 }
 
 .submit {

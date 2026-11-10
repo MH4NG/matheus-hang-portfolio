@@ -18,7 +18,7 @@ describe('integridade dos dados de projetos', () => {
   it('todo projeto tem os campos que os componentes consomem', () => {
     for (const project of projects) {
       expect(project.slug, 'slug').toBeTruthy();
-      expect(project.version, 'version').toMatch(/^v\d+\.\d+\.\d+$/);
+      expect(project.version, 'version').toMatch(/^\d+\.\d+\.\d+$/);
       expect(project.name, 'name').toBeTruthy();
       expect(project.tagline, 'tagline').toBeTruthy();
       expect(project.description, 'description').toBeTruthy();

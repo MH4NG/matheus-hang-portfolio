@@ -20,7 +20,7 @@ export default function ProjectDetail() {
   return (
     <article className={styles.detail}>
       {/* React 19 iça <title>/<meta> para o <head> sem biblioteca externa */}
-      <title>{`${name} ${version} — Matheus Hang`}</title>
+      <title>{`${name} — Matheus Hang`}</title>
       <meta name="description" content={tagline} />
 
       <div className="container">

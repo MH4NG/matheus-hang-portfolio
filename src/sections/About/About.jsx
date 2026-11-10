@@ -25,7 +25,7 @@ export default function About() {
             <p>
               Sou desenvolvedor front-end com experiência em criar interfaces modernas e
               responsivas, com foco em boas práticas de desenvolvimento e em qualidade de
-              software. Ao longo da minha formação, passei por projetos que vão de
+              software. Já desenvolvi projetos que vão de
               fundamentos de React e TypeScript até arquitetura de micro frontends, PWAs
               offline-first e pipelines de CI/CD — sempre documentando o processo, cobrindo
               o código com testes automatizados e medindo performance na prática.

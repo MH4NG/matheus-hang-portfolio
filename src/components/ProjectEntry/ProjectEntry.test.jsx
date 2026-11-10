@@ -5,7 +5,7 @@ import ProjectEntry from './ProjectEntry';
 
 const projectBase = {
   slug: 'projeto-teste',
-  version: 'v2.1.0',
+  version: '2.1.0',
   name: 'Projeto de Teste',
   date: 'mai/2026',
   tagline: 'Tagline do projeto',
@@ -27,9 +27,9 @@ function renderEntry(overrides = {}) {
 }
 
 describe('ProjectEntry', () => {
-  it('exibe versão, nome, data e tagline', () => {
+  it('exibe número, nome, data e tagline', () => {
     renderEntry();
-    expect(screen.getByText('v2.1.0')).toBeInTheDocument();
+    expect(screen.getByText('2.1.0')).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Projeto de Teste' })).toBeInTheDocument();
     expect(screen.getByText('mai/2026')).toBeInTheDocument();
     expect(screen.getByText('Tagline do projeto')).toBeInTheDocument();

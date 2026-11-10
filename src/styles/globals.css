@@ -1,10 +1,10 @@
 /* ============================================================
    DESIGN TOKENS
-   Conceito visual: o portfólio é apresentado como um CHANGELOG.md
-   de desenvolvedor — cada projeto é uma "versão" lançada, com
-   marcadores no estilo diff (+ adicionado / − corrigido) e
-   etiquetas de versão (vX.Y.Z) que reforçam a ideia de evolução
-   técnica ao longo do curso.
+   Conceito visual: estética de ferramentas de desenvolvedor
+   (CHANGELOG.md, diff, git tag) — marcadores no estilo diff
+   (+ adicionado / − corrigido) e uma etiqueta numerada por projeto.
+   Cada projeto é independente; o número só indica a posição na
+   progressão técnica, não uma versão.
    ============================================================ */
 
 /* As fontes são carregadas por <link> no index.html, não por @import aqui:
@@ -24,9 +24,10 @@
 
   --accent-added: #1f8a4c;      /* verde diff — tecnologias adicionadas */
   --accent-added-bg: #e8f5ed;
-  --accent-fixed: #c24b3f;      /* vermelho diff — correções/bugs */
-  --accent-fixed-bg: #fbebe9;
-  --accent-tag: #a8730f;        /* âmbar — etiquetas de versão */
+  --accent-fixed: #556575;      /* cinza-ardósia — correções (neutro, para não soar como erro) */
+  --accent-fixed-bg: #e9edf0;
+  --accent-error: #c24b3f;      /* vermelho — mensagens de erro */
+  --accent-tag: #a8730f;        /* âmbar — etiquetas numeradas dos projetos */
   --accent-tag-bg: #f6ecd9;
   --accent-link: #1f6f8a;       /* azul petróleo — links */
 

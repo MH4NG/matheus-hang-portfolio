@@ -1,9 +1,10 @@
 # Portfólio — Matheus Hang
 
-Portfólio pessoal desenvolvido em React (Vite) + CSS Modules, como projeto final do curso.
+Portfólio pessoal desenvolvido em React (Vite) + CSS Modules.
 Apresenta os principais projetos, habilidades e formas de contato no formato de um
-"changelog de desenvolvedor": cada projeto é tratado como uma versão lançada, com
-tecnologias marcadas no estilo diff (`+ adicionado` / `− corrigido`).
+"changelog de desenvolvedor", com tecnologias marcadas no estilo diff
+(`+ adicionado` / `− corrigido`). Cada projeto é independente — o número na
+etiqueta indica só a posição na progressão técnica, não uma versão.
 
 🔗 **Ao vivo:** https://h4ng.vercel.app
 📦 **Repositório:** https://github.com/MH4NG/matheus-hang-portfolio
@@ -68,17 +69,17 @@ seguindo o padrão de CSS Modules (estilos com escopo local, sem conflito de nom
 
 Cada projeto listado no portfólio tem repositório e demo publicados:
 
-| Versão | Projeto | Repositório | Demo | Concluído |
+| Nº | Projeto | Repositório | Demo | Concluído |
 | --- | --- | --- | --- | --- |
-| v5.0.0 | portal-voluntariado | github.com/MH4NG/portal-voluntariado | pontes-petropolis.vercel.app | out/2026 |
-| v4.0.0 | tarefas-app | github.com/MH4NG/tarefas-app | tarefas-app-h4-ng.vercel.app | jul/2026 |
-| v3.0.0 | diario-de-bordo | github.com/MH4NG/diario-de-bordo | diario-de-bordo-h4-ng.vercel.app | ago/2026 |
-| v2.0.0 | micro-frontends | github.com/MH4NG/micro-frontends-module-federation | micro-frontends-h4-ng.vercel.app | ago/2026 |
-| v1.0.0 | todolist-recoil | github.com/MH4NG/todolist-recoil | todolist-recoil-h4-ng.vercel.app | abr/2026 |
+| 5.0.0 | portal-voluntariado | github.com/MH4NG/portal-voluntariado | pontes-petropolis.vercel.app | out/2026 |
+| 4.0.0 | tarefas-app | github.com/MH4NG/tarefas-app | tarefas-app-h4-ng.vercel.app | jul/2026 |
+| 3.0.0 | diario-de-bordo | github.com/MH4NG/diario-de-bordo | diario-de-bordo-h4-ng.vercel.app | ago/2026 |
+| 2.0.0 | micro-frontends | github.com/MH4NG/micro-frontends-module-federation | micro-frontends-h4-ng.vercel.app | ago/2026 |
+| 1.0.0 | todolist-recoil | github.com/MH4NG/todolist-recoil | todolist-recoil-h4-ng.vercel.app | abr/2026 |
 
-As datas vêm do último push de cada repositório. Note que a numeração de versões
-reflete a **progressão técnica** do curso, não a ordem cronológica: o
-micro-frontends é o repositório mais recente, mas aparece como v2.0.0.
+As datas vêm do último push de cada repositório. Note que a numeração
+reflete a **progressão técnica**, não a ordem cronológica: o
+micro-frontends é o repositório mais recente, mas aparece como 2.0.0.
 
 ## Deploy
 

@@ -29,7 +29,7 @@
 }
 
 .fatal {
-  color: var(--accent-fixed);
+  color: var(--accent-error);
 }
 
 .heading {

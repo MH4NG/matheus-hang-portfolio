@@ -10,10 +10,10 @@ export default function Projects() {
     <section id="projetos" className={styles.projects}>
       <div className="container">
         <p className={styles.label}>// projetos</p>
-        <h2 className={styles.heading}>Histórico de versões</h2>
+        <h2 className={styles.heading}>Projetos em destaque</h2>
         <p className={styles.intro}>
-          Cada projeto abaixo é tratado como uma versão lançada, ordenada pela progressão
-          técnica do curso — da arquitetura mais avançada aos fundamentos.
+          Cada projeto abaixo é independente, com objetivo e stack próprios. A ordem segue
+          a progressão técnica — da arquitetura mais avançada aos fundamentos.
         </p>
 
         {/* Cada entrada se revela ao entrar na viewport, em vez de a lista

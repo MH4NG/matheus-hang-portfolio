@@ -1,13 +1,13 @@
 /**
- * Dados dos projetos, organizados como "versões" de um changelog.
- * A numeração (v1.0.0 → v5.0.0) reflete a evolução técnica ao longo
- * do curso; `date` é o mês do último push de cada repositório.
+ * Dados dos projetos. Cada projeto é independente: a numeração
+ * (1.0.0 → 5.0.0) só indica a posição na progressão técnica;
+ * `date` é o mês do último push de cada repositório.
  */
 
 export const projects = [
   {
     slug: 'portal-voluntariado',
-    version: 'v5.0.0',
+    version: '5.0.0',
     name: 'Pontes — Portal de Voluntariado',
     date: 'out/2026',
     tagline: 'Portal acessível com mapa interativo e onboarding em etapas',
@@ -39,14 +39,14 @@ export const projects = [
   },
   {
     slug: 'tarefas-app',
-    version: 'v4.0.0',
+    version: '4.0.0',
     name: 'Tarefas App',
     date: 'jul/2026',
     tagline: 'Task app com pipeline de CI/CD completo',
     description:
       'Aplicação de gerenciamento de tarefas construída com Next.js 16 e TypeScript, com cobertura de testes consistente e deploy automatizado via GitHub Actions.',
     longDescription:
-      'O projeto mais completo do curso em termos de ciclo de vida de desenvolvimento: da arquitetura de componentes até a esteira de integração e entrega contínua. O estado das tarefas é centralizado em um hook customizado (useContadorDeTarefas), que serve como fonte única de verdade e evita dessincronizações entre componentes — um bug real identificado e corrigido durante o desenvolvimento. A página principal é um Server Component, enquanto o formulário de criação de tarefas é um Client Component controlado.',
+      'O projeto mais completo do portfólio em termos de ciclo de vida de desenvolvimento: da arquitetura de componentes até a esteira de integração e entrega contínua. O estado das tarefas é centralizado em um hook customizado (useContadorDeTarefas), que serve como fonte única de verdade e evita dessincronizações entre componentes — um bug real identificado e corrigido durante o desenvolvimento. A página principal é um Server Component, enquanto o formulário de criação de tarefas é um Client Component controlado.',
     tech: ['Next.js 16', 'TypeScript', 'App Router', 'Jest', 'Testing Library', 'GitHub Actions'],
     added: [
       'Arquitetura em App Router com Server e Client Components',
@@ -66,7 +66,7 @@ export const projects = [
   },
   {
     slug: 'diario-de-bordo',
-    version: 'v3.0.0',
+    version: '3.0.0',
     name: 'Diário de Bordo',
     date: 'ago/2026',
     tagline: 'PWA offline-first com foco em performance',
@@ -95,7 +95,7 @@ export const projects = [
   },
   {
     slug: 'micro-frontends',
-    version: 'v2.0.0',
+    version: '2.0.0',
     name: 'Micro Frontends — Cardápio & Pedido',
     date: 'ago/2026',
     tagline: 'Arquitetura de micro frontends com Module Federation',
@@ -122,7 +122,7 @@ export const projects = [
   },
   {
     slug: 'todolist-recoil',
-    version: 'v1.0.0',
+    version: '1.0.0',
     name: 'Lista de Tarefas — Recoil',
     date: 'abr/2026',
     tagline: 'Estado global com Recoil (atoms & selectors)',
